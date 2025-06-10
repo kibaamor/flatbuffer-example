@@ -1,0 +1,23 @@
+namespace Protos;
+
+table TextMessage {
+  text: string;
+}
+
+table ImageMessage {
+  url: string;
+  width: int;
+  height: int;
+}
+
+union MessageContent {
+  TextMessage,
+  ImageMessage
+}
+
+table MessageRoot {
+  time: ulong;
+  content: MessageContent;
+}
+
+root_type MessageRoot;

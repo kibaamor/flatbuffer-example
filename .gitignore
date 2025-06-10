@@ -1,0 +1,5 @@
+build/**
+!build/protos/
+!build/protos/**
+
+.vscode
